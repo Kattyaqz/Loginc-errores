@@ -1,5 +1,5 @@
 <?php
-    require_once("c://xampp/htdocs/login/view/head/head.php");
+    require_once("c://xampp/htdocs/login_con_errores/view/head/head.php");
     if(!empty($_SESSION['usuario'])){
         header("Location:panel_control.php");
     }
@@ -7,7 +7,7 @@
 
 <div class="fondo-login">
     <div class="icon">
-        <a href="/login/index.php">
+        <a href="/login_con_errores/index.php">
             <i class="fa-solid fa-shield-dog dog-icon"></i>
         </a>
     </div>
@@ -43,5 +43,5 @@
 </div>
 
 <?php
-    require_once("c://xampp/htdocs/login/view/head/footer.php");
+    require_once("c://xampp/htdocs/login_con_errores/view/head/footer.php");
 ?>

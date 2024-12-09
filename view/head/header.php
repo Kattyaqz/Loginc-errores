@@ -1,5 +1,5 @@
 <?php
-    require_once("c://xampp/htdocs/login/view/head/head.php");
+    require_once("c://xampp/htdocs/login_con_errores/view/head/head.php");
     
 ?>
 
@@ -40,7 +40,7 @@
                             <a class="nav-link" href="#">Sesión de recursos</a>
                         </li>
                     </ul>
-                    <a href="/login/view/home/logout.php" class="boton">Cerrar Sesión</a>
+                    <a href="/login_con_errores/view/home/logout.php" class="boton">Cerrar Sesión</a>
                 </div>
                 <?php endif ?>
 

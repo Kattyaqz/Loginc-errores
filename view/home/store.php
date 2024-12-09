@@ -1,5 +1,5 @@
 <?php
-    require_once("c://xampp/htdocs/login/controller/homeController.php");
+    require_once("c://xampp/htdocs/login_con_errores/controller/homeController.php");
     $obj = new homeController();
     $correo = $_POST['correo'];
     $contraseña = $_POST['contraseña'];
