@@ -24,8 +24,8 @@
                             <a class="nav-link" href="#">Contactanos</a>
                         </li>
                     </ul>
-                    <a href="/login/view/home/login.php" class="boton">Inicia Sesión</a>
-                    <a href="/login/view/home/signup.php" class="boton">Registrate</a>
+                    <a href="/login_con_errores/view/home/login.php" class="boton">Inicia Sesión</a>
+                    <a href="/login_con_errores/view/home/signup.php" class="boton">Registrate</a>
                 </div>
                 <?php else: ?>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
