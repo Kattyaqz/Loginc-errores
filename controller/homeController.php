@@ -7,11 +7,12 @@ class homeController {
         $this->MODEL = new homeModel();
     }
 
-    public function guardarUsuario($correo, $contraseña) {
-        $valor = $this->MODEL->agregarNuevoUsuario(
-            $this->limpiarcorreo($correo),
-            $this->encriptarcontraseña($this->limpiarcadena($contraseña))
-        );
+    public function guardarUsuario($correo, $contraseña, $rut) {
+        $correoLimpio = $this->limpiarcorreo($correo);
+        $contraseñaEncriptada = $this->encriptarcontraseña($this->limpiarcadena($contraseña));
+        $rutLimpio = $this->limpiarRUT($rut);
+
+        $valor = $this->MODEL->agregarNuevoUsuario($correoLimpio, $contraseñaEncriptada, $rutLimpio);
         return $valor;
     }
 
@@ -20,6 +21,12 @@ class homeController {
         $campo = filter_var($campo, FILTER_UNSAFE_RAW);
         $campo = htmlspecialchars($campo);
         return $campo;
+    }
+
+    public function limpiarRUT($rut) {
+        $rut = strtoupper(trim($rut));
+        $rut = preg_replace('/[^0-9K]/', '', $rut); // Eliminar caracteres no permitidos
+        return $rut;
     }
 
     public function limpiarcorreo($campo) {
